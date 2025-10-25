@@ -1,0 +1,288 @@
+/* =========================
+   RESET & GLOBAL STYLE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  width: 100%;
+  background-color: rgb(119, 0, 255);
+  color: white;
+  display: flex;
+  flex-direction: column; /* header dan nav tetap vertikal */
+  align-items: flex-start;
+  padding: 15px 0;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; /* biar ada jarak dengan navbar */
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  width: 100%;
+  border-top: 2px solid white;
+  padding-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column; /* mobile: menu vertikal */
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  text-decoration: underline;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  margin: 15px;
+}
+
+.kontak {
+  padding: 20px;
+ 
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  margin: 15px;
+}
+
+main h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+main h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+main p {
+  padding-left: 10px;
+  margin-left: 5px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: px;
+}
+main ol li {
+  margin-left: 25px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+main ul li {
+  margin-left: 25px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   SOSMED SECTION
+========================= */
+.sosmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.sosmed a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.sosmed a img:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   KONTAK INFO
+========================= */
+.kontak-info {
+  max-width: 100%;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kontak-info h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.kontak-info ul {
+  padding-left: 10px;
+}
+
+/* =========================
+   TABLE FIX RESPONSIVE
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed; /* penting biar kolom ga maksa lebar */
+  word-wrap: break-word;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  word-break: break-word; /* biar teks panjang turun ke bawah */
+}
+
+th {
+  background-color: #eee;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* Tablet (>=768px) */
+@media (min-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: row; /* di tablet, menu jadi sejajar tapi tetap di bawah header */
+    justify-content: center;
+    gap: 25px;
+  }
+
+  main {
+    margin: 25px auto;
+    max-width: 700px;
+    padding: 25px;
+  }
+
+  .kontak-info {
+    max-width: 600px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 0;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    padding-left: 10px;
+    width: 70px;
+    height: 60px;
+  }
+
+  nav ul {
+    gap: 40px;
+  }
+
+  main {
+    max-width: 900px;
+    padding: 30px;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 12px;
+  }
+}
+
